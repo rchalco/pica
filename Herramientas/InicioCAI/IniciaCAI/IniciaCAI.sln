@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IniciaCAI", "IniciaCAI.csproj", "{DC3BFC57-70B2-49E7-BEC7-86B73D5EA8DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FondoDePantalla", "..\FondoDePantalla\FondoDePantalla.csproj", "{3737CA1F-D2C6-4EBA-962E-86A030365D62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IniciaATM", "..\IniciaATM\IniciaATM.csproj", "{0B51DB2F-2447-482A-A939-63D977B56BEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActualizaCAI", "..\ActualizaCAI\ActualizaCAI.csproj", "{1173B30E-74D3-43C8-8675-E191F601C6F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC3BFC57-70B2-49E7-BEC7-86B73D5EA8DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC3BFC57-70B2-49E7-BEC7-86B73D5EA8DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC3BFC57-70B2-49E7-BEC7-86B73D5EA8DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC3BFC57-70B2-49E7-BEC7-86B73D5EA8DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3737CA1F-D2C6-4EBA-962E-86A030365D62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3737CA1F-D2C6-4EBA-962E-86A030365D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3737CA1F-D2C6-4EBA-962E-86A030365D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3737CA1F-D2C6-4EBA-962E-86A030365D62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B51DB2F-2447-482A-A939-63D977B56BEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B51DB2F-2447-482A-A939-63D977B56BEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B51DB2F-2447-482A-A939-63D977B56BEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B51DB2F-2447-482A-A939-63D977B56BEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1173B30E-74D3-43C8-8675-E191F601C6F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1173B30E-74D3-43C8-8675-E191F601C6F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1173B30E-74D3-43C8-8675-E191F601C6F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1173B30E-74D3-43C8-8675-E191F601C6F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E0FB85B0-8D3F-4E76-8358-1DC3117616DF}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.1.112:8080/tfs/newcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\FondoDePantalla\\FondoDePantalla.csproj
+		SccProjectName1 = ../FondoDePantalla
+		SccLocalPath1 = ..\\FondoDePantalla
+		SccProjectUniqueName2 = IniciaCAI.csproj
+		SccLocalPath2 = .
+		SccProjectUniqueName3 = ..\\IniciaATM\\IniciaATM.csproj
+		SccProjectName3 = ../IniciaATM
+		SccLocalPath3 = ..\\IniciaATM
+		SccProjectUniqueName4 = ..\\ActualizaCAI\\ActualizaCAI.csproj
+		SccProjectName4 = ../ActualizaCAI
+		SccLocalPath4 = ..\\ActualizaCAI
+	EndGlobalSection
+EndGlobal

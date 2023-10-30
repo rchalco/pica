@@ -1,0 +1,16 @@
+D:\TFS\PICA\SourceCode\Dev\Dispositivos\FingerControl\FingerPrintControl\bin\Debug\Prodem.Fingerprint.FingerPrintControl.dll.config
+D:\TFS\PICA\SourceCode\Dev\Dispositivos\FingerControl\FingerPrintControl\bin\Debug\Prodem.Fingerprint.FingerPrintControl.dll
+D:\TFS\PICA\SourceCode\Dev\Dispositivos\FingerControl\FingerPrintControl\bin\Debug\Prodem.Fingerprint.FingerPrintControl.pdb
+D:\TFS\PICA\SourceCode\Dev\Dispositivos\FingerControl\FingerPrintControl\bin\Debug\DPCtlUruNet.dll
+D:\TFS\PICA\SourceCode\Dev\Dispositivos\FingerControl\FingerPrintControl\bin\Debug\DPUruNet.dll
+D:\TFS\PICA\SourceCode\Dev\Dispositivos\FingerControl\FingerPrintControl\obj\Debug\FingerPrintControl.csproj.AssemblyReference.cache
+D:\TFS\PICA\SourceCode\Dev\Dispositivos\FingerControl\FingerPrintControl\obj\Debug\Prodem.Fingerprint.FingerPrintControl.FingerEnroll.CompareFinger.resources
+D:\TFS\PICA\SourceCode\Dev\Dispositivos\FingerControl\FingerPrintControl\obj\Debug\Prodem.Fingerprint.FingerPrintControl.FingerEnroll.EnrollControl.resources
+D:\TFS\PICA\SourceCode\Dev\Dispositivos\FingerControl\FingerPrintControl\obj\Debug\Prodem.Fingerprint.FingerPrintControl.FingerEnroll.EnrollOneFingerControl.resources
+D:\TFS\PICA\SourceCode\Dev\Dispositivos\FingerControl\FingerPrintControl\obj\Debug\Prodem.Fingerprint.FingerPrintControl.FingerEnroll.GetFingerControl.resources
+D:\TFS\PICA\SourceCode\Dev\Dispositivos\FingerControl\FingerPrintControl\obj\Debug\Prodem.Fingerprint.FingerPrintControl.Properties.Resources.resources
+D:\TFS\PICA\SourceCode\Dev\Dispositivos\FingerControl\FingerPrintControl\obj\Debug\FingerPrintControl.csproj.GenerateResource.cache
+D:\TFS\PICA\SourceCode\Dev\Dispositivos\FingerControl\FingerPrintControl\obj\Debug\FingerPrintControl.csproj.CoreCompileInputs.cache
+D:\TFS\PICA\SourceCode\Dev\Dispositivos\FingerControl\FingerPrintControl\obj\Debug\FingerPrintControl.csproj.CopyComplete
+D:\TFS\PICA\SourceCode\Dev\Dispositivos\FingerControl\FingerPrintControl\obj\Debug\Prodem.Fingerprint.FingerPrintControl.dll
+D:\TFS\PICA\SourceCode\Dev\Dispositivos\FingerControl\FingerPrintControl\obj\Debug\Prodem.Fingerprint.FingerPrintControl.pdb

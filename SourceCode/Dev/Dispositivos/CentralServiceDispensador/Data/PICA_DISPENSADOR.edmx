@@ -1,0 +1,629 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PICA_DISPENSADORModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tATMs">
+          <Key>
+            <PropertyRef Name="IdATM" />
+          </Key>
+          <Property Name="IdATM" Type="int" Nullable="false" />
+          <Property Name="NrSerie" Type="varchar" MaxLength="50" />
+          <Property Name="IdOffice" Type="int" />
+          <Property Name="CodOffice" Type="varchar" MaxLength="5" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Model" Type="varchar" MaxLength="50" />
+          <Property Name="Ubication" Type="varchar" MaxLength="100" />
+          <Property Name="Geolocation" Type="varchar" MaxLength="30" />
+          <Property Name="IP" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="tCompositionDeviceATM">
+          <Key>
+            <PropertyRef Name="IdCompositionDeviceATM" />
+          </Key>
+          <Property Name="IdCompositionDeviceATM" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdDevice" Type="int" Nullable="false" />
+          <Property Name="IdATM" Type="int" Nullable="false" />
+          <Property Name="DateCreation" Type="datetime" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="Notes" Type="varchar" MaxLength="500" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tConfigDevice">
+          <Key>
+            <PropertyRef Name="IdDevice" />
+          </Key>
+          <Property Name="IdDevice" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Version" Type="int" />
+          <Property Name="XmlConfig" Type="xml" />
+        </EntityType>
+        <EntityType Name="tConfigDispenserDevice">
+          <Key>
+            <PropertyRef Name="IdTypeDevice" />
+          </Key>
+          <Property Name="IdTypeDevice" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Version" Type="int" />
+          <Property Name="XmlGeneralConfig" Type="xml" />
+        </EntityType>
+        <EntityType Name="tDevice">
+          <Key>
+            <PropertyRef Name="IdDevice" />
+          </Key>
+          <Property Name="IdDevice" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdTypeDevice" Type="int" Nullable="false" />
+          <Property Name="NrSerie" Type="varchar" MaxLength="30" />
+          <Property Name="Firmware" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Notes" Type="varchar" MaxLength="500" />
+          <Property Name="Localization" Type="varchar" MaxLength="50" />
+          <Property Name="Store" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tDomain">
+          <Key>
+            <PropertyRef Name="IdTypeDevice" />
+            <PropertyRef Name="IdDomain" />
+          </Key>
+          <Property Name="IdTypeDevice" Type="int" Nullable="false" />
+          <Property Name="IdDomain" Type="int" Nullable="false" />
+          <Property Name="IdState" Type="varchar" MaxLength="5" />
+          <Property Name="DescState" Type="varchar" MaxLength="200" />
+          <Property Name="ValueNemo" Type="varchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="tNMDCommand">
+          <Key>
+            <PropertyRef Name="IdNMDCommand" />
+          </Key>
+          <Property Name="IdTypeDevice" Type="int" Nullable="false" />
+          <Property Name="IdNMDCommand" Type="int" Nullable="false" />
+          <Property Name="Command" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="ConcreteCommand" Type="varchar" MaxLength="70" />
+          <Property Name="Parser" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tNMDResponseCode">
+          <Key>
+            <PropertyRef Name="IdNMDResponseCode" />
+          </Key>
+          <Property Name="IdNMDResponseCode" Type="int" Nullable="false" />
+          <Property Name="IdTypeDevice" Type="int" Nullable="false" />
+          <Property Name="IdStatusCode" Type="int" Nullable="false" />
+          <Property Name="Value" Type="char" MaxLength="1" />
+          <Property Name="Type" Type="char" MaxLength="1" />
+          <Property Name="Response" Type="varchar" MaxLength="70" />
+          <Property Name="TypeEnum" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="tTypeDevice">
+          <Key>
+            <PropertyRef Name="IdTypeDevice" />
+          </Key>
+          <Property Name="IdTypeDevice" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+          <Property Name="Provider" Type="varchar" MaxLength="500" />
+          <Property Name="Brand" Type="varchar" MaxLength="500" />
+          <Property Name="Model" Type="varchar" MaxLength="500" />
+          <Property Name="DateCreate" Type="datetime" />
+        </EntityType>
+        <Association Name="FK_CompositionDeviceATM_tATMs">
+          <End Role="tATMs" Type="Self.tATMs" Multiplicity="1" />
+          <End Role="tCompositionDeviceATM" Type="Self.tCompositionDeviceATM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tATMs">
+              <PropertyRef Name="IdATM" />
+            </Principal>
+            <Dependent Role="tCompositionDeviceATM">
+              <PropertyRef Name="IdATM" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CompositionDeviceATM_tDevice">
+          <End Role="tDevice" Type="Self.tDevice" Multiplicity="1" />
+          <End Role="tCompositionDeviceATM" Type="Self.tCompositionDeviceATM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tDevice">
+              <PropertyRef Name="IdDevice" />
+            </Principal>
+            <Dependent Role="tCompositionDeviceATM">
+              <PropertyRef Name="IdDevice" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tConfigDevice_tDevice">
+          <End Role="tDevice" Type="Self.tDevice" Multiplicity="1" />
+          <End Role="tConfigDevice" Type="Self.tConfigDevice" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tDevice">
+              <PropertyRef Name="IdDevice" />
+            </Principal>
+            <Dependent Role="tConfigDevice">
+              <PropertyRef Name="IdDevice" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tConfigDispenserDevice_tTypeDevice">
+          <End Role="tTypeDevice" Type="Self.tTypeDevice" Multiplicity="1" />
+          <End Role="tConfigDispenserDevice" Type="Self.tConfigDispenserDevice" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tTypeDevice">
+              <PropertyRef Name="IdTypeDevice" />
+            </Principal>
+            <Dependent Role="tConfigDispenserDevice">
+              <PropertyRef Name="IdTypeDevice" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tDevice_tTypeDevice">
+          <End Role="tTypeDevice" Type="Self.tTypeDevice" Multiplicity="1" />
+          <End Role="tDevice" Type="Self.tDevice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tTypeDevice">
+              <PropertyRef Name="IdTypeDevice" />
+            </Principal>
+            <Dependent Role="tDevice">
+              <PropertyRef Name="IdTypeDevice" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tNMDCommand_tTypeDevice">
+          <End Role="tTypeDevice" Type="Self.tTypeDevice" Multiplicity="1" />
+          <End Role="tNMDCommand" Type="Self.tNMDCommand" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tTypeDevice">
+              <PropertyRef Name="IdTypeDevice" />
+            </Principal>
+            <Dependent Role="tNMDCommand">
+              <PropertyRef Name="IdTypeDevice" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tNMDResponseCode_tTypeDevice">
+          <End Role="tTypeDevice" Type="Self.tTypeDevice" Multiplicity="1" />
+          <End Role="tNMDResponseCode" Type="Self.tNMDResponseCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tTypeDevice">
+              <PropertyRef Name="IdTypeDevice" />
+            </Principal>
+            <Dependent Role="tNMDResponseCode">
+              <PropertyRef Name="IdTypeDevice" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="GetDispenserByATM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="ATM">
+          <Parameter Name="IdATM" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="PICA_DISPENSADORModelStoreContainer">
+          <EntitySet Name="tATMs" EntityType="Self.tATMs" Schema="ATM" store:Type="Tables" />
+          <EntitySet Name="tCompositionDeviceATM" EntityType="Self.tCompositionDeviceATM" Schema="ATM" store:Type="Tables" />
+          <EntitySet Name="tConfigDevice" EntityType="Self.tConfigDevice" Schema="ATM" store:Type="Tables" />
+          <EntitySet Name="tConfigDispenserDevice" EntityType="Self.tConfigDispenserDevice" Schema="ATM" store:Type="Tables" />
+          <EntitySet Name="tDevice" EntityType="Self.tDevice" Schema="ATM" store:Type="Tables" />
+          <EntitySet Name="tDomain" EntityType="Self.tDomain" Schema="ATM" store:Type="Tables" />
+          <EntitySet Name="tNMDCommand" EntityType="Self.tNMDCommand" Schema="ATM" store:Type="Tables" />
+          <EntitySet Name="tNMDResponseCode" EntityType="Self.tNMDResponseCode" Schema="ATM" store:Type="Tables" />
+          <EntitySet Name="tTypeDevice" EntityType="Self.tTypeDevice" Schema="ATM" store:Type="Tables" />
+          <AssociationSet Name="FK_CompositionDeviceATM_tATMs" Association="Self.FK_CompositionDeviceATM_tATMs">
+            <End Role="tATMs" EntitySet="tATMs" />
+            <End Role="tCompositionDeviceATM" EntitySet="tCompositionDeviceATM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CompositionDeviceATM_tDevice" Association="Self.FK_CompositionDeviceATM_tDevice">
+            <End Role="tDevice" EntitySet="tDevice" />
+            <End Role="tCompositionDeviceATM" EntitySet="tCompositionDeviceATM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tConfigDevice_tDevice" Association="Self.FK_tConfigDevice_tDevice">
+            <End Role="tDevice" EntitySet="tDevice" />
+            <End Role="tConfigDevice" EntitySet="tConfigDevice" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tConfigDispenserDevice_tTypeDevice" Association="Self.FK_tConfigDispenserDevice_tTypeDevice">
+            <End Role="tTypeDevice" EntitySet="tTypeDevice" />
+            <End Role="tConfigDispenserDevice" EntitySet="tConfigDispenserDevice" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tDevice_tTypeDevice" Association="Self.FK_tDevice_tTypeDevice">
+            <End Role="tTypeDevice" EntitySet="tTypeDevice" />
+            <End Role="tDevice" EntitySet="tDevice" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tNMDCommand_tTypeDevice" Association="Self.FK_tNMDCommand_tTypeDevice">
+            <End Role="tTypeDevice" EntitySet="tTypeDevice" />
+            <End Role="tNMDCommand" EntitySet="tNMDCommand" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tNMDResponseCode_tTypeDevice" Association="Self.FK_tNMDResponseCode_tTypeDevice">
+            <End Role="tTypeDevice" EntitySet="tTypeDevice" />
+            <End Role="tNMDResponseCode" EntitySet="tNMDResponseCode" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PICA_DISPENSADORModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tATMs">
+          <Key>
+            <PropertyRef Name="IdATM" />
+          </Key>
+          <Property Name="IdATM" Type="Int32" Nullable="false" />
+          <Property Name="NrSerie" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IdOffice" Type="Int32" />
+          <Property Name="CodOffice" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Ubication" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Geolocation" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="IP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tCompositionDeviceATM" Relationship="Self.FK_CompositionDeviceATM_tATMs" FromRole="tATMs" ToRole="tCompositionDeviceATM" />
+        </EntityType>
+        <EntityType Name="tCompositionDeviceATM">
+          <Key>
+            <PropertyRef Name="IdCompositionDeviceATM" />
+          </Key>
+          <Property Name="IdCompositionDeviceATM" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdDevice" Type="Int32" Nullable="false" />
+          <Property Name="IdATM" Type="Int32" Nullable="false" />
+          <Property Name="DateCreation" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="Notes" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tATMs" Relationship="Self.FK_CompositionDeviceATM_tATMs" FromRole="tCompositionDeviceATM" ToRole="tATMs" />
+          <NavigationProperty Name="tDevice" Relationship="Self.FK_CompositionDeviceATM_tDevice" FromRole="tCompositionDeviceATM" ToRole="tDevice" />
+        </EntityType>
+        <EntityType Name="tDevice">
+          <Key>
+            <PropertyRef Name="IdDevice" />
+          </Key>
+          <Property Name="IdDevice" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdTypeDevice" Type="Int32" Nullable="false" />
+          <Property Name="NrSerie" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Firmware" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="Notes" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Localization" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Store" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tCompositionDeviceATM" Relationship="Self.FK_CompositionDeviceATM_tDevice" FromRole="tDevice" ToRole="tCompositionDeviceATM" />
+          <NavigationProperty Name="tTypeDevice" Relationship="Self.FK_tDevice_tTypeDevice" FromRole="tDevice" ToRole="tTypeDevice" />
+          <NavigationProperty Name="tConfigDevice" Relationship="PICA_DISPENSADORModel.FK_tConfigDevice_tDevice" FromRole="tDevice" ToRole="tConfigDevice" />
+        </EntityType>
+        <EntityType Name="tDomain">
+          <Key>
+            <PropertyRef Name="IdTypeDevice" />
+            <PropertyRef Name="IdDomain" />
+          </Key>
+          <Property Name="IdTypeDevice" Type="Int32" Nullable="false" />
+          <Property Name="IdDomain" Type="Int32" Nullable="false" />
+          <Property Name="IdState" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="DescState" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ValueNemo" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tNMDCommand">
+          <Key>
+            <PropertyRef Name="IdNMDCommand" />
+          </Key>
+          <Property Name="IdTypeDevice" Type="Int32" Nullable="false" />
+          <Property Name="IdNMDCommand" Type="Int32" Nullable="false" />
+          <Property Name="Command" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ConcreteCommand" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="Parser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tTypeDevice" Relationship="Self.FK_tNMDCommand_tTypeDevice" FromRole="tNMDCommand" ToRole="tTypeDevice" />
+        </EntityType>
+        <EntityType Name="tNMDResponseCode">
+          <Key>
+            <PropertyRef Name="IdNMDResponseCode" />
+          </Key>
+          <Property Name="IdNMDResponseCode" Type="Int32" Nullable="false" />
+          <Property Name="IdTypeDevice" Type="Int32" Nullable="false" />
+          <Property Name="IdStatusCode" Type="Int32" Nullable="false" />
+          <Property Name="Value" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Type" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Response" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="TypeEnum" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tTypeDevice" Relationship="Self.FK_tNMDResponseCode_tTypeDevice" FromRole="tNMDResponseCode" ToRole="tTypeDevice" />
+        </EntityType>
+        <EntityType Name="tTypeDevice">
+          <Key>
+            <PropertyRef Name="IdTypeDevice" />
+          </Key>
+          <Property Name="IdTypeDevice" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Provider" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Brand" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Model" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="DateCreate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="tDevice" Relationship="Self.FK_tDevice_tTypeDevice" FromRole="tTypeDevice" ToRole="tDevice" />
+          <NavigationProperty Name="tNMDCommand" Relationship="Self.FK_tNMDCommand_tTypeDevice" FromRole="tTypeDevice" ToRole="tNMDCommand" />
+          <NavigationProperty Name="tNMDResponseCode" Relationship="Self.FK_tNMDResponseCode_tTypeDevice" FromRole="tTypeDevice" ToRole="tNMDResponseCode" />
+          <NavigationProperty Name="tConfigDispenserDevice" Relationship="PICA_DISPENSADORModel.FK_tConfigDispenserDevice_tTypeDevice" FromRole="tTypeDevice" ToRole="tConfigDispenserDevice" />
+        </EntityType>
+        <Association Name="FK_CompositionDeviceATM_tATMs">
+          <End Role="tATMs" Type="Self.tATMs" Multiplicity="1" />
+          <End Role="tCompositionDeviceATM" Type="Self.tCompositionDeviceATM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tATMs">
+              <PropertyRef Name="IdATM" />
+            </Principal>
+            <Dependent Role="tCompositionDeviceATM">
+              <PropertyRef Name="IdATM" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CompositionDeviceATM_tDevice">
+          <End Role="tDevice" Type="Self.tDevice" Multiplicity="1" />
+          <End Role="tCompositionDeviceATM" Type="Self.tCompositionDeviceATM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tDevice">
+              <PropertyRef Name="IdDevice" />
+            </Principal>
+            <Dependent Role="tCompositionDeviceATM">
+              <PropertyRef Name="IdDevice" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tDevice_tTypeDevice">
+          <End Role="tTypeDevice" Type="Self.tTypeDevice" Multiplicity="1" />
+          <End Role="tDevice" Type="Self.tDevice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tTypeDevice">
+              <PropertyRef Name="IdTypeDevice" />
+            </Principal>
+            <Dependent Role="tDevice">
+              <PropertyRef Name="IdTypeDevice" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tNMDCommand_tTypeDevice">
+          <End Role="tTypeDevice" Type="Self.tTypeDevice" Multiplicity="1" />
+          <End Role="tNMDCommand" Type="Self.tNMDCommand" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tTypeDevice">
+              <PropertyRef Name="IdTypeDevice" />
+            </Principal>
+            <Dependent Role="tNMDCommand">
+              <PropertyRef Name="IdTypeDevice" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tNMDResponseCode_tTypeDevice">
+          <End Role="tTypeDevice" Type="Self.tTypeDevice" Multiplicity="1" />
+          <End Role="tNMDResponseCode" Type="Self.tNMDResponseCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tTypeDevice">
+              <PropertyRef Name="IdTypeDevice" />
+            </Principal>
+            <Dependent Role="tNMDResponseCode">
+              <PropertyRef Name="IdTypeDevice" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PICA_DISPENSADOREntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tATMs" EntityType="Self.tATMs" />
+          <EntitySet Name="tCompositionDeviceATM" EntityType="Self.tCompositionDeviceATM" />
+          <EntitySet Name="tDevice" EntityType="Self.tDevice" />
+          <EntitySet Name="tDomain" EntityType="Self.tDomain" />
+          <EntitySet Name="tNMDCommand" EntityType="Self.tNMDCommand" />
+          <EntitySet Name="tNMDResponseCode" EntityType="Self.tNMDResponseCode" />
+          <EntitySet Name="tTypeDevice" EntityType="Self.tTypeDevice" />
+          <AssociationSet Name="FK_CompositionDeviceATM_tATMs" Association="Self.FK_CompositionDeviceATM_tATMs">
+            <End Role="tATMs" EntitySet="tATMs" />
+            <End Role="tCompositionDeviceATM" EntitySet="tCompositionDeviceATM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CompositionDeviceATM_tDevice" Association="Self.FK_CompositionDeviceATM_tDevice">
+            <End Role="tDevice" EntitySet="tDevice" />
+            <End Role="tCompositionDeviceATM" EntitySet="tCompositionDeviceATM" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tDevice_tTypeDevice" Association="Self.FK_tDevice_tTypeDevice">
+            <End Role="tTypeDevice" EntitySet="tTypeDevice" />
+            <End Role="tDevice" EntitySet="tDevice" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tNMDCommand_tTypeDevice" Association="Self.FK_tNMDCommand_tTypeDevice">
+            <End Role="tTypeDevice" EntitySet="tTypeDevice" />
+            <End Role="tNMDCommand" EntitySet="tNMDCommand" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tNMDResponseCode_tTypeDevice" Association="Self.FK_tNMDResponseCode_tTypeDevice">
+            <End Role="tTypeDevice" EntitySet="tTypeDevice" />
+            <End Role="tNMDResponseCode" EntitySet="tNMDResponseCode" />
+          </AssociationSet>
+          <EntitySet Name="tConfigDevice" EntityType="PICA_DISPENSADORModel.tConfigDevice" />
+          <AssociationSet Name="FK_tConfigDevice_tDevice" Association="PICA_DISPENSADORModel.FK_tConfigDevice_tDevice">
+            <End Role="tDevice" EntitySet="tDevice" />
+            <End Role="tConfigDevice" EntitySet="tConfigDevice" />
+          </AssociationSet>
+          <EntitySet Name="tConfigDispenserDevice" EntityType="PICA_DISPENSADORModel.tConfigDispenserDevice" />
+          <AssociationSet Name="FK_tConfigDispenserDevice_tTypeDevice" Association="PICA_DISPENSADORModel.FK_tConfigDispenserDevice_tTypeDevice">
+            <End Role="tTypeDevice" EntitySet="tTypeDevice" />
+            <End Role="tConfigDispenserDevice" EntitySet="tConfigDispenserDevice" />
+          </AssociationSet>
+          <FunctionImport Name="GetDispenserByATM" ReturnType="Collection(PICA_DISPENSADORModel.GetDispenserByATM_Result)">
+            <Parameter Name="IdATM" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="tConfigDevice">
+          <Key>
+            <PropertyRef Name="IdDevice" />
+          </Key>
+          <Property Name="IdDevice" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="Version" Type="Int32" />
+          <Property Name="XmlConfig" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tDevice" Relationship="PICA_DISPENSADORModel.FK_tConfigDevice_tDevice" FromRole="tConfigDevice" ToRole="tDevice" />
+        </EntityType>
+        <Association Name="FK_tConfigDevice_tDevice">
+          <End Type="PICA_DISPENSADORModel.tDevice" Role="tDevice" Multiplicity="1" />
+          <End Type="PICA_DISPENSADORModel.tConfigDevice" Role="tConfigDevice" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tDevice">
+              <PropertyRef Name="IdDevice" />
+            </Principal>
+            <Dependent Role="tConfigDevice">
+              <PropertyRef Name="IdDevice" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="tConfigDispenserDevice">
+          <Key>
+            <PropertyRef Name="IdTypeDevice" />
+          </Key>
+          <Property Name="IdTypeDevice" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="Version" Type="Int32" />
+          <Property Name="XmlGeneralConfig" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tTypeDevice" Relationship="PICA_DISPENSADORModel.FK_tConfigDispenserDevice_tTypeDevice" FromRole="tConfigDispenserDevice" ToRole="tTypeDevice" />
+        </EntityType>
+        <Association Name="FK_tConfigDispenserDevice_tTypeDevice">
+          <End Type="PICA_DISPENSADORModel.tTypeDevice" Role="tTypeDevice" Multiplicity="1" />
+          <End Type="PICA_DISPENSADORModel.tConfigDispenserDevice" Role="tConfigDispenserDevice" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tTypeDevice">
+              <PropertyRef Name="IdTypeDevice" />
+            </Principal>
+            <Dependent Role="tConfigDispenserDevice">
+              <PropertyRef Name="IdTypeDevice" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="GetDispenserByATM_Result">
+          <Property Type="Int32" Name="IdATM" Nullable="false" />
+          <Property Type="Int32" Name="IdDevice" Nullable="false" />
+          <Property Type="String" Name="XmlConfig" Nullable="true" MaxLength="Max" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PICA_DISPENSADORModelStoreContainer" CdmEntityContainer="PICA_DISPENSADOREntities">
+          <EntitySetMapping Name="tATMs">
+            <EntityTypeMapping TypeName="PICA_DISPENSADORModel.tATMs">
+              <MappingFragment StoreEntitySet="tATMs">
+                <ScalarProperty Name="IdATM" ColumnName="IdATM" />
+                <ScalarProperty Name="NrSerie" ColumnName="NrSerie" />
+                <ScalarProperty Name="IdOffice" ColumnName="IdOffice" />
+                <ScalarProperty Name="CodOffice" ColumnName="CodOffice" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Ubication" ColumnName="Ubication" />
+                <ScalarProperty Name="Geolocation" ColumnName="Geolocation" />
+                <ScalarProperty Name="IP" ColumnName="IP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tCompositionDeviceATM">
+            <EntityTypeMapping TypeName="PICA_DISPENSADORModel.tCompositionDeviceATM">
+              <MappingFragment StoreEntitySet="tCompositionDeviceATM">
+                <ScalarProperty Name="IdCompositionDeviceATM" ColumnName="IdCompositionDeviceATM" />
+                <ScalarProperty Name="IdDevice" ColumnName="IdDevice" />
+                <ScalarProperty Name="IdATM" ColumnName="IdATM" />
+                <ScalarProperty Name="DateCreation" ColumnName="DateCreation" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tDevice">
+            <EntityTypeMapping TypeName="PICA_DISPENSADORModel.tDevice">
+              <MappingFragment StoreEntitySet="tDevice">
+                <ScalarProperty Name="IdDevice" ColumnName="IdDevice" />
+                <ScalarProperty Name="IdTypeDevice" ColumnName="IdTypeDevice" />
+                <ScalarProperty Name="NrSerie" ColumnName="NrSerie" />
+                <ScalarProperty Name="Firmware" ColumnName="Firmware" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Localization" ColumnName="Localization" />
+                <ScalarProperty Name="Store" ColumnName="Store" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tDomain">
+            <EntityTypeMapping TypeName="PICA_DISPENSADORModel.tDomain">
+              <MappingFragment StoreEntitySet="tDomain">
+                <ScalarProperty Name="IdTypeDevice" ColumnName="IdTypeDevice" />
+                <ScalarProperty Name="IdDomain" ColumnName="IdDomain" />
+                <ScalarProperty Name="IdState" ColumnName="IdState" />
+                <ScalarProperty Name="DescState" ColumnName="DescState" />
+                <ScalarProperty Name="ValueNemo" ColumnName="ValueNemo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tNMDCommand">
+            <EntityTypeMapping TypeName="PICA_DISPENSADORModel.tNMDCommand">
+              <MappingFragment StoreEntitySet="tNMDCommand">
+                <ScalarProperty Name="IdTypeDevice" ColumnName="IdTypeDevice" />
+                <ScalarProperty Name="IdNMDCommand" ColumnName="IdNMDCommand" />
+                <ScalarProperty Name="Command" ColumnName="Command" />
+                <ScalarProperty Name="ConcreteCommand" ColumnName="ConcreteCommand" />
+                <ScalarProperty Name="Parser" ColumnName="Parser" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tNMDResponseCode">
+            <EntityTypeMapping TypeName="PICA_DISPENSADORModel.tNMDResponseCode">
+              <MappingFragment StoreEntitySet="tNMDResponseCode">
+                <ScalarProperty Name="IdNMDResponseCode" ColumnName="IdNMDResponseCode" />
+                <ScalarProperty Name="IdTypeDevice" ColumnName="IdTypeDevice" />
+                <ScalarProperty Name="IdStatusCode" ColumnName="IdStatusCode" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Response" ColumnName="Response" />
+                <ScalarProperty Name="TypeEnum" ColumnName="TypeEnum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tTypeDevice">
+            <EntityTypeMapping TypeName="PICA_DISPENSADORModel.tTypeDevice">
+              <MappingFragment StoreEntitySet="tTypeDevice">
+                <ScalarProperty Name="IdTypeDevice" ColumnName="IdTypeDevice" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Provider" ColumnName="Provider" />
+                <ScalarProperty Name="Brand" ColumnName="Brand" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tConfigDevice">
+            <EntityTypeMapping TypeName="PICA_DISPENSADORModel.tConfigDevice">
+              <MappingFragment StoreEntitySet="tConfigDevice">
+                <ScalarProperty Name="XmlConfig" ColumnName="XmlConfig" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="IdDevice" ColumnName="IdDevice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tConfigDispenserDevice">
+            <EntityTypeMapping TypeName="PICA_DISPENSADORModel.tConfigDispenserDevice">
+              <MappingFragment StoreEntitySet="tConfigDispenserDevice">
+                <ScalarProperty Name="XmlGeneralConfig" ColumnName="XmlGeneralConfig" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="IdTypeDevice" ColumnName="IdTypeDevice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetDispenserByATM" FunctionName="PICA_DISPENSADORModel.Store.GetDispenserByATM">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PICA_DISPENSADORModel.GetDispenserByATM_Result">
+                <ScalarProperty Name="IdATM" ColumnName="IdATM" />
+                <ScalarProperty Name="IdDevice" ColumnName="IdDevice" />
+                <ScalarProperty Name="XmlConfig" ColumnName="XmlConfig" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

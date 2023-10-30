@@ -1,0 +1,293 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.1 Dispensador", "1.1 Dispensador", "{DFBDAD52-33A7-4C93-97FF-82493E98D665}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3 Receptor", "1.3 Receptor", "{8244389F-C62A-4BCC-A209-D0AE5743458F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2 Huella", "1.2 Huella", "{0A36CCD3-B65F-4037-B3BC-0BCF7F2A130D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.4 Tarjeta", "1.4 Tarjeta", "{00F7397E-FF8A-41AA-9434-9FCE4F514F3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RuntimeDispensador", "RuntimeDispensador\RuntimeDispensador.csproj", "{BE46CB95-C0A6-419B-9878-B37DE47773D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Disposivos", "1. Disposivos", "{83053628-DADA-4D71-9D4D-E1FC8D596957}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Test", "2. Test", "{C38188A6-A9C9-4DF9-840B-402CB5753394}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.1 Dispensador", "2.1 Dispensador", "{5707E2FD-5877-4A0E-A949-3A96B4A8F695}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DispensadorTest", "DispensadorTest\DispensadorTest.csproj", "{22C0666E-0B50-4979-88FB-A5E92AF67E77}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. CrossCutting", "3. CrossCutting", "{A29AF140-0AC4-401C-B013-01744480512C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolDirective", "ToolDirective\ToolDirective.csproj", "{08563FAF-3247-4795-A481-19775DF653DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DispenserManagement", "DispenserManagement", "{BCEA287F-FFEB-4C0C-B9A1-A3D7471FC602}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NMDManagement", "NMDManagement\NMDManagement.csproj", "{703BEA00-90D2-4936-8D50-F2373A1B87B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RuntimeCardReader", "RuntimeCardReader\RuntimeCardReader.csproj", "{1CBCD4B0-D89C-4434-865B-F613D1FBEE87}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.4.1 Core", "1.4.1 Core", "{E616D25F-8877-41C8-84F2-DC9D1C3D1A6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCSC", "PCSC\PCSC.csproj", "{28B8C74F-7F09-44F2-9590-B2DDAD1C1887}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.4 Tarjeta", "2.4 Tarjeta", "{29C182B7-8771-43A9-B682-9CB16596147C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RuntimeCardReader.Test", "RuntimeCardReader.Test\RuntimeCardReader.Test.csproj", "{16D62B7D-04F7-4757-94F0-35657A162DB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RuntimeFingerPrint", "RuntimeFingerPrint\RuntimeFingerPrint.csproj", "{BFCCA01C-4DBB-4E7A-A7C0-09241BC5686F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.2 Huella", "2.2 Huella", "{E684CABA-F6C8-465D-8DF3-85A31354C819}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RuntimeFinger.Services.Test", "RuntimeFinger.Services.Test\RuntimeFinger.Services.Test.csproj", "{A161F305-A7D7-42E7-B96F-659AD580074F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmbosingProject", "EmbosingProject\EmbosingProject.csproj", "{ED6145E7-8B99-40FA-9134-917852E40064}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Monitoreo", "Monitoreo", "{3CB74335-D1A6-47CC-9A6E-A11531D90626}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monitor", "Monitor\Monitor.csproj", "{FDA49A24-EB50-42E8-B911-26979C72E84F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceMonitoreo", "ServiceMonitoreo\ServiceMonitoreo.csproj", "{A8250AEC-9055-43BB-B674-73EE4AC518ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.5 Monitoreo", "2.5 Monitoreo", "{82B74EF4-0FC7-4772-BAF6-62789E8212C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monitoreo.Test", "Monitoreo.Test\Monitoreo.Test.csproj", "{EB906E8B-2821-4DF1-A4EC-AD0EC93157DC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.5 Orchestrator", "1.5 Orchestrator", "{87A7BE57-3BD3-4002-AE21-E6789536A17B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchestrator", "OrchestratorDevice\Orchestrator.csproj", "{13DC1197-CE0F-419D-9D7D-D55F8707FC6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.5 OrchetratorTest", "2.5 OrchetratorTest", "{00BBF2D4-F58C-43E1-B777-5A17969DDDE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchestrator.Test", "Orchestrator.Test\Orchestrator.Test.csproj", "{FC2C18BD-8EFD-4376-A5E2-CA3F830FCEA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interop.Main", "Interop.Main\Interop.Main.csproj", "{5D60C763-4EB2-4C97-9FAE-BDDD1749C83B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCardReader", "TestCardReader\TestCardReader.csproj", "{D08D65A5-3295-4C55-BDCE-842E3EF43CFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RuntimeReceptor", "RuntimeReceptor\RuntimeReceptor.csproj", "{D73874AC-72E7-44FE-B670-0AE30E28ECFC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.3 Receptor", "2.3 Receptor", "{E3B03616-F6E1-4A50-B789-8CC067221A28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.Receptor.Test", "Runtime.Receptor.Test\Runtime.Receptor.Test.csproj", "{2B75D61B-93D6-46F2-A916-5436E3CC24BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneradorLotes", "GeneradorLotes\GeneradorLotes.csproj", "{EFEAE035-4F0C-4801-8D9D-72F59E31C4A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE46CB95-C0A6-419B-9878-B37DE47773D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE46CB95-C0A6-419B-9878-B37DE47773D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE46CB95-C0A6-419B-9878-B37DE47773D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE46CB95-C0A6-419B-9878-B37DE47773D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22C0666E-0B50-4979-88FB-A5E92AF67E77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22C0666E-0B50-4979-88FB-A5E92AF67E77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22C0666E-0B50-4979-88FB-A5E92AF67E77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22C0666E-0B50-4979-88FB-A5E92AF67E77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08563FAF-3247-4795-A481-19775DF653DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08563FAF-3247-4795-A481-19775DF653DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08563FAF-3247-4795-A481-19775DF653DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08563FAF-3247-4795-A481-19775DF653DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{703BEA00-90D2-4936-8D50-F2373A1B87B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{703BEA00-90D2-4936-8D50-F2373A1B87B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{703BEA00-90D2-4936-8D50-F2373A1B87B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{703BEA00-90D2-4936-8D50-F2373A1B87B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CBCD4B0-D89C-4434-865B-F613D1FBEE87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CBCD4B0-D89C-4434-865B-F613D1FBEE87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CBCD4B0-D89C-4434-865B-F613D1FBEE87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CBCD4B0-D89C-4434-865B-F613D1FBEE87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28B8C74F-7F09-44F2-9590-B2DDAD1C1887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28B8C74F-7F09-44F2-9590-B2DDAD1C1887}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28B8C74F-7F09-44F2-9590-B2DDAD1C1887}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28B8C74F-7F09-44F2-9590-B2DDAD1C1887}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16D62B7D-04F7-4757-94F0-35657A162DB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16D62B7D-04F7-4757-94F0-35657A162DB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16D62B7D-04F7-4757-94F0-35657A162DB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16D62B7D-04F7-4757-94F0-35657A162DB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFCCA01C-4DBB-4E7A-A7C0-09241BC5686F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFCCA01C-4DBB-4E7A-A7C0-09241BC5686F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFCCA01C-4DBB-4E7A-A7C0-09241BC5686F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFCCA01C-4DBB-4E7A-A7C0-09241BC5686F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A161F305-A7D7-42E7-B96F-659AD580074F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A161F305-A7D7-42E7-B96F-659AD580074F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A161F305-A7D7-42E7-B96F-659AD580074F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A161F305-A7D7-42E7-B96F-659AD580074F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED6145E7-8B99-40FA-9134-917852E40064}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED6145E7-8B99-40FA-9134-917852E40064}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED6145E7-8B99-40FA-9134-917852E40064}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED6145E7-8B99-40FA-9134-917852E40064}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDA49A24-EB50-42E8-B911-26979C72E84F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDA49A24-EB50-42E8-B911-26979C72E84F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDA49A24-EB50-42E8-B911-26979C72E84F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDA49A24-EB50-42E8-B911-26979C72E84F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8250AEC-9055-43BB-B674-73EE4AC518ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8250AEC-9055-43BB-B674-73EE4AC518ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8250AEC-9055-43BB-B674-73EE4AC518ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8250AEC-9055-43BB-B674-73EE4AC518ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB906E8B-2821-4DF1-A4EC-AD0EC93157DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB906E8B-2821-4DF1-A4EC-AD0EC93157DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB906E8B-2821-4DF1-A4EC-AD0EC93157DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB906E8B-2821-4DF1-A4EC-AD0EC93157DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13DC1197-CE0F-419D-9D7D-D55F8707FC6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13DC1197-CE0F-419D-9D7D-D55F8707FC6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13DC1197-CE0F-419D-9D7D-D55F8707FC6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13DC1197-CE0F-419D-9D7D-D55F8707FC6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC2C18BD-8EFD-4376-A5E2-CA3F830FCEA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC2C18BD-8EFD-4376-A5E2-CA3F830FCEA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC2C18BD-8EFD-4376-A5E2-CA3F830FCEA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC2C18BD-8EFD-4376-A5E2-CA3F830FCEA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D60C763-4EB2-4C97-9FAE-BDDD1749C83B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D60C763-4EB2-4C97-9FAE-BDDD1749C83B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D60C763-4EB2-4C97-9FAE-BDDD1749C83B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D60C763-4EB2-4C97-9FAE-BDDD1749C83B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D08D65A5-3295-4C55-BDCE-842E3EF43CFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D08D65A5-3295-4C55-BDCE-842E3EF43CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D08D65A5-3295-4C55-BDCE-842E3EF43CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D08D65A5-3295-4C55-BDCE-842E3EF43CFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D73874AC-72E7-44FE-B670-0AE30E28ECFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D73874AC-72E7-44FE-B670-0AE30E28ECFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D73874AC-72E7-44FE-B670-0AE30E28ECFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D73874AC-72E7-44FE-B670-0AE30E28ECFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B75D61B-93D6-46F2-A916-5436E3CC24BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B75D61B-93D6-46F2-A916-5436E3CC24BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B75D61B-93D6-46F2-A916-5436E3CC24BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B75D61B-93D6-46F2-A916-5436E3CC24BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFEAE035-4F0C-4801-8D9D-72F59E31C4A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFEAE035-4F0C-4801-8D9D-72F59E31C4A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFEAE035-4F0C-4801-8D9D-72F59E31C4A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFEAE035-4F0C-4801-8D9D-72F59E31C4A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DFBDAD52-33A7-4C93-97FF-82493E98D665} = {83053628-DADA-4D71-9D4D-E1FC8D596957}
+		{8244389F-C62A-4BCC-A209-D0AE5743458F} = {83053628-DADA-4D71-9D4D-E1FC8D596957}
+		{0A36CCD3-B65F-4037-B3BC-0BCF7F2A130D} = {83053628-DADA-4D71-9D4D-E1FC8D596957}
+		{00F7397E-FF8A-41AA-9434-9FCE4F514F3E} = {83053628-DADA-4D71-9D4D-E1FC8D596957}
+		{BE46CB95-C0A6-419B-9878-B37DE47773D0} = {DFBDAD52-33A7-4C93-97FF-82493E98D665}
+		{5707E2FD-5877-4A0E-A949-3A96B4A8F695} = {C38188A6-A9C9-4DF9-840B-402CB5753394}
+		{22C0666E-0B50-4979-88FB-A5E92AF67E77} = {5707E2FD-5877-4A0E-A949-3A96B4A8F695}
+		{08563FAF-3247-4795-A481-19775DF653DA} = {A29AF140-0AC4-401C-B013-01744480512C}
+		{703BEA00-90D2-4936-8D50-F2373A1B87B6} = {BCEA287F-FFEB-4C0C-B9A1-A3D7471FC602}
+		{1CBCD4B0-D89C-4434-865B-F613D1FBEE87} = {00F7397E-FF8A-41AA-9434-9FCE4F514F3E}
+		{E616D25F-8877-41C8-84F2-DC9D1C3D1A6A} = {00F7397E-FF8A-41AA-9434-9FCE4F514F3E}
+		{28B8C74F-7F09-44F2-9590-B2DDAD1C1887} = {E616D25F-8877-41C8-84F2-DC9D1C3D1A6A}
+		{29C182B7-8771-43A9-B682-9CB16596147C} = {C38188A6-A9C9-4DF9-840B-402CB5753394}
+		{16D62B7D-04F7-4757-94F0-35657A162DB6} = {29C182B7-8771-43A9-B682-9CB16596147C}
+		{BFCCA01C-4DBB-4E7A-A7C0-09241BC5686F} = {0A36CCD3-B65F-4037-B3BC-0BCF7F2A130D}
+		{E684CABA-F6C8-465D-8DF3-85A31354C819} = {C38188A6-A9C9-4DF9-840B-402CB5753394}
+		{A161F305-A7D7-42E7-B96F-659AD580074F} = {E684CABA-F6C8-465D-8DF3-85A31354C819}
+		{ED6145E7-8B99-40FA-9134-917852E40064} = {00F7397E-FF8A-41AA-9434-9FCE4F514F3E}
+		{FDA49A24-EB50-42E8-B911-26979C72E84F} = {3CB74335-D1A6-47CC-9A6E-A11531D90626}
+		{A8250AEC-9055-43BB-B674-73EE4AC518ED} = {3CB74335-D1A6-47CC-9A6E-A11531D90626}
+		{82B74EF4-0FC7-4772-BAF6-62789E8212C6} = {C38188A6-A9C9-4DF9-840B-402CB5753394}
+		{EB906E8B-2821-4DF1-A4EC-AD0EC93157DC} = {82B74EF4-0FC7-4772-BAF6-62789E8212C6}
+		{87A7BE57-3BD3-4002-AE21-E6789536A17B} = {83053628-DADA-4D71-9D4D-E1FC8D596957}
+		{13DC1197-CE0F-419D-9D7D-D55F8707FC6A} = {87A7BE57-3BD3-4002-AE21-E6789536A17B}
+		{00BBF2D4-F58C-43E1-B777-5A17969DDDE0} = {C38188A6-A9C9-4DF9-840B-402CB5753394}
+		{FC2C18BD-8EFD-4376-A5E2-CA3F830FCEA1} = {00BBF2D4-F58C-43E1-B777-5A17969DDDE0}
+		{5D60C763-4EB2-4C97-9FAE-BDDD1749C83B} = {87A7BE57-3BD3-4002-AE21-E6789536A17B}
+		{D08D65A5-3295-4C55-BDCE-842E3EF43CFC} = {00F7397E-FF8A-41AA-9434-9FCE4F514F3E}
+		{D73874AC-72E7-44FE-B670-0AE30E28ECFC} = {8244389F-C62A-4BCC-A209-D0AE5743458F}
+		{E3B03616-F6E1-4A50-B789-8CC067221A28} = {C38188A6-A9C9-4DF9-840B-402CB5753394}
+		{2B75D61B-93D6-46F2-A916-5436E3CC24BF} = {E3B03616-F6E1-4A50-B789-8CC067221A28}
+		{EFEAE035-4F0C-4801-8D9D-72F59E31C4A5} = {00F7397E-FF8A-41AA-9434-9FCE4F514F3E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C1985F5D-B03D-4F6D-A197-E7E5A483F113}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 21
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.1.112:8080/tfs/newcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DispensadorTest\\DispensadorTest.csproj
+		SccProjectTopLevelParentUniqueName1 = Dispositivos.sln
+		SccProjectName1 = DispensadorTest
+		SccLocalPath1 = DispensadorTest
+		SccProjectUniqueName2 = RuntimeDispensador\\RuntimeDispensador.csproj
+		SccProjectTopLevelParentUniqueName2 = Dispositivos.sln
+		SccProjectName2 = RuntimeDispensador
+		SccLocalPath2 = RuntimeDispensador
+		SccProjectUniqueName3 = ToolDirective\\ToolDirective.csproj
+		SccProjectTopLevelParentUniqueName3 = Dispositivos.sln
+		SccProjectName3 = ToolDirective
+		SccLocalPath3 = ToolDirective
+		SccProjectUniqueName4 = NMDManagement\\NMDManagement.csproj
+		SccProjectTopLevelParentUniqueName4 = Dispositivos.sln
+		SccProjectName4 = NMDManagement
+		SccLocalPath4 = NMDManagement
+		SccProjectUniqueName5 = RuntimeCardReader\\RuntimeCardReader.csproj
+		SccProjectTopLevelParentUniqueName5 = Dispositivos.sln
+		SccProjectName5 = RuntimeCardReader
+		SccLocalPath5 = RuntimeCardReader
+		SccProjectUniqueName6 = PCSC\\PCSC.csproj
+		SccProjectTopLevelParentUniqueName6 = Dispositivos.sln
+		SccProjectName6 = PCSC
+		SccLocalPath6 = PCSC
+		SccProjectUniqueName7 = RuntimeCardReader.Test\\RuntimeCardReader.Test.csproj
+		SccProjectTopLevelParentUniqueName7 = Dispositivos.sln
+		SccProjectName7 = RuntimeCardReader.Test
+		SccLocalPath7 = RuntimeCardReader.Test
+		SccProjectUniqueName8 = RuntimeFingerPrint\\RuntimeFingerPrint.csproj
+		SccProjectTopLevelParentUniqueName8 = Dispositivos.sln
+		SccProjectName8 = RuntimeFingerPrint
+		SccLocalPath8 = RuntimeFingerPrint
+		SccProjectUniqueName9 = RuntimeFinger.Services.Test\\RuntimeFinger.Services.Test.csproj
+		SccProjectTopLevelParentUniqueName9 = Dispositivos.sln
+		SccProjectName9 = RuntimeFinger.Services.Test
+		SccLocalPath9 = RuntimeFinger.Services.Test
+		SccProjectUniqueName10 = EmbosingProject\\EmbosingProject.csproj
+		SccProjectTopLevelParentUniqueName10 = Dispositivos.sln
+		SccProjectName10 = EmbosingProject
+		SccLocalPath10 = EmbosingProject
+		SccProjectUniqueName11 = Monitor\\Monitor.csproj
+		SccProjectTopLevelParentUniqueName11 = Dispositivos.sln
+		SccProjectName11 = Monitor
+		SccLocalPath11 = Monitor
+		SccProjectUniqueName12 = ServiceMonitoreo\\ServiceMonitoreo.csproj
+		SccProjectTopLevelParentUniqueName12 = Dispositivos.sln
+		SccProjectName12 = ServiceMonitoreo
+		SccLocalPath12 = ServiceMonitoreo
+		SccProjectUniqueName13 = Monitoreo.Test\\Monitoreo.Test.csproj
+		SccProjectTopLevelParentUniqueName13 = Dispositivos.sln
+		SccProjectName13 = Monitoreo.Test
+		SccLocalPath13 = Monitoreo.Test
+		SccProjectUniqueName14 = Orchestrator.Test\\Orchestrator.Test.csproj
+		SccProjectTopLevelParentUniqueName14 = Dispositivos.sln
+		SccProjectName14 = Orchestrator.Test
+		SccLocalPath14 = Orchestrator.Test
+		SccProjectUniqueName15 = Interop.Main\\Interop.Main.csproj
+		SccProjectTopLevelParentUniqueName15 = Dispositivos.sln
+		SccProjectName15 = Interop.Main
+		SccLocalPath15 = Interop.Main
+		SccProjectUniqueName16 = OrchestratorDevice\\Orchestrator.csproj
+		SccProjectTopLevelParentUniqueName16 = Dispositivos.sln
+		SccProjectName16 = OrchestratorDevice
+		SccLocalPath16 = OrchestratorDevice
+		SccProjectUniqueName17 = TestCardReader\\TestCardReader.csproj
+		SccProjectTopLevelParentUniqueName17 = Dispositivos.sln
+		SccProjectName17 = TestCardReader
+		SccLocalPath17 = TestCardReader
+		SccProjectUniqueName18 = RuntimeReceptor\\RuntimeReceptor.csproj
+		SccProjectTopLevelParentUniqueName18 = Dispositivos.sln
+		SccProjectName18 = RuntimeReceptor
+		SccLocalPath18 = RuntimeReceptor
+		SccProjectUniqueName19 = Runtime.Receptor.Test\\Runtime.Receptor.Test.csproj
+		SccProjectTopLevelParentUniqueName19 = Dispositivos.sln
+		SccProjectName19 = Runtime.Receptor.Test
+		SccLocalPath19 = Runtime.Receptor.Test
+		SccProjectUniqueName20 = GeneradorLotes\\GeneradorLotes.csproj
+		SccProjectTopLevelParentUniqueName20 = Dispositivos.sln
+		SccProjectName20 = GeneradorLotes
+		SccLocalPath20 = GeneradorLotes
+	EndGlobalSection
+EndGlobal

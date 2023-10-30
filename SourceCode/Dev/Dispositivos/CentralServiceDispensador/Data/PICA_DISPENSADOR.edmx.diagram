@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9f88caea36ed47209efbe4ba21a3e9c4" Name="Diagram1">
+        <EntityTypeShape EntityType="PICA_DISPENSADORModel.tATMs" Width="1.5" PointX="3" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PICA_DISPENSADORModel.tCompositionDeviceATM" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PICA_DISPENSADORModel.tDevice" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PICA_DISPENSADORModel.tDomain" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PICA_DISPENSADORModel.tNMDCommand" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="PICA_DISPENSADORModel.tNMDResponseCode" Width="1.5" PointX="3" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="PICA_DISPENSADORModel.tTypeDevice" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
+        <AssociationConnector Association="PICA_DISPENSADORModel.FK_CompositionDeviceATM_tATMs" ManuallyRouted="false" />
+        <AssociationConnector Association="PICA_DISPENSADORModel.FK_CompositionDeviceATM_tDevice" ManuallyRouted="false" />
+        <AssociationConnector Association="PICA_DISPENSADORModel.FK_tDevice_tTypeDevice" ManuallyRouted="false" />
+        <AssociationConnector Association="PICA_DISPENSADORModel.FK_tNMDCommand_tTypeDevice" ManuallyRouted="false" />
+        <AssociationConnector Association="PICA_DISPENSADORModel.FK_tNMDResponseCode_tTypeDevice" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="PICA_DISPENSADORModel.tConfigDevice" Width="1.5" PointX="5.25" PointY="8" />
+        <AssociationConnector Association="PICA_DISPENSADORModel.FK_tConfigDevice_tDevice" />
+        <EntityTypeShape EntityType="PICA_DISPENSADORModel.tConfigDispenserDevice" Width="1.5" PointX="3" PointY="1.5" />
+        <AssociationConnector Association="PICA_DISPENSADORModel.FK_tConfigDispenserDevice_tTypeDevice" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

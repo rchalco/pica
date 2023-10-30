@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="HandlerMonitoreo" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.161.41:3210/soap/ServiceMonitoreo?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.161.41:3210/soap/ServiceMonitoreo?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.161.41:3210/soap/ServiceMonitoreo?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Foundation.Stone.Application.Wrapper" />
+      <xsd:import schemaLocation="http://192.168.161.41:3210/soap/ServiceMonitoreo?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ServiceMonitoreo.Contract" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IHandlerMonitoreo_GetStateFingerPrint_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStateFingerPrint" />
+  </wsdl:message>
+  <wsdl:message name="IHandlerMonitoreo_GetStateFingerPrint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStateFingerPrintResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHandlerMonitoreo_GetStateCardReader_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStateCardReader" />
+  </wsdl:message>
+  <wsdl:message name="IHandlerMonitoreo_GetStateCardReader_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStateCardReaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHandlerMonitoreo_GetPunblisherByIdentifier_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPunblisherByIdentifier" />
+  </wsdl:message>
+  <wsdl:message name="IHandlerMonitoreo_GetPunblisherByIdentifier_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPunblisherByIdentifierResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHandlerMonitoreo_GetReaderCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReaderCard" />
+  </wsdl:message>
+  <wsdl:message name="IHandlerMonitoreo_GetReaderCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReaderCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHandlerMonitoreo_Reset_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reset" />
+  </wsdl:message>
+  <wsdl:message name="IHandlerMonitoreo_Reset_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHandlerMonitoreo_ReadCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadCard" />
+  </wsdl:message>
+  <wsdl:message name="IHandlerMonitoreo_ReadCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHandlerMonitoreo_EjectCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:EjectCard" />
+  </wsdl:message>
+  <wsdl:message name="IHandlerMonitoreo_EjectCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EjectCardResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IHandlerMonitoreo">
+    <wsdl:operation name="GetStateFingerPrint">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHandlerMonitoreo/GetStateFingerPrint" message="tns:IHandlerMonitoreo_GetStateFingerPrint_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHandlerMonitoreo/GetStateFingerPrintResponse" message="tns:IHandlerMonitoreo_GetStateFingerPrint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStateCardReader">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHandlerMonitoreo/GetStateCardReader" message="tns:IHandlerMonitoreo_GetStateCardReader_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHandlerMonitoreo/GetStateCardReaderResponse" message="tns:IHandlerMonitoreo_GetStateCardReader_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPunblisherByIdentifier">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHandlerMonitoreo/GetPunblisherByIdentifier" message="tns:IHandlerMonitoreo_GetPunblisherByIdentifier_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHandlerMonitoreo/GetPunblisherByIdentifierResponse" message="tns:IHandlerMonitoreo_GetPunblisherByIdentifier_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReaderCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHandlerMonitoreo/GetReaderCard" message="tns:IHandlerMonitoreo_GetReaderCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHandlerMonitoreo/GetReaderCardResponse" message="tns:IHandlerMonitoreo_GetReaderCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reset">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHandlerMonitoreo/Reset" message="tns:IHandlerMonitoreo_Reset_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHandlerMonitoreo/ResetResponse" message="tns:IHandlerMonitoreo_Reset_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHandlerMonitoreo/ReadCard" message="tns:IHandlerMonitoreo_ReadCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHandlerMonitoreo/ReadCardResponse" message="tns:IHandlerMonitoreo_ReadCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EjectCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHandlerMonitoreo/EjectCard" message="tns:IHandlerMonitoreo_EjectCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHandlerMonitoreo/EjectCardResponse" message="tns:IHandlerMonitoreo_EjectCard_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="soap" type="tns:IHandlerMonitoreo">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetStateFingerPrint">
+      <soap:operation soapAction="http://tempuri.org/IHandlerMonitoreo/GetStateFingerPrint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStateCardReader">
+      <soap:operation soapAction="http://tempuri.org/IHandlerMonitoreo/GetStateCardReader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPunblisherByIdentifier">
+      <soap:operation soapAction="http://tempuri.org/IHandlerMonitoreo/GetPunblisherByIdentifier" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReaderCard">
+      <soap:operation soapAction="http://tempuri.org/IHandlerMonitoreo/GetReaderCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reset">
+      <soap:operation soapAction="http://tempuri.org/IHandlerMonitoreo/Reset" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadCard">
+      <soap:operation soapAction="http://tempuri.org/IHandlerMonitoreo/ReadCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EjectCard">
+      <soap:operation soapAction="http://tempuri.org/IHandlerMonitoreo/EjectCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HandlerMonitoreo">
+    <wsdl:port name="soap" binding="tns:soap">
+      <soap:address location="http://192.168.161.41:3210/soap/ServiceMonitoreo" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

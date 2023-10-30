@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="c201b205-b7ec-4178-b7de-0b6db5ca53af" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.161.41:3210/soap/ServiceMonitoreo" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceMonitoreo.xsd" MetadataType="Schema" ID="b7e26dc8-87af-42df-9bf0-b5c3c10911ed" SourceId="1" SourceUrl="http://192.168.161.41:3210/soap/ServiceMonitoreo?xsd=xsd0" />
+    <MetadataFile FileName="ServiceMonitoreo1.xsd" MetadataType="Schema" ID="5c7e243e-b9e6-44a1-bc09-33777232f8de" SourceId="1" SourceUrl="http://192.168.161.41:3210/soap/ServiceMonitoreo?xsd=xsd1" />
+    <MetadataFile FileName="ServiceMonitoreo2.xsd" MetadataType="Schema" ID="8e9621da-5268-4e86-b31c-f52b65be3800" SourceId="1" SourceUrl="http://192.168.161.41:3210/soap/ServiceMonitoreo?xsd=xsd2" />
+    <MetadataFile FileName="ServiceMonitoreo3.xsd" MetadataType="Schema" ID="a7e3d731-daef-438d-a367-779254d1feb7" SourceId="1" SourceUrl="http://192.168.161.41:3210/soap/ServiceMonitoreo?xsd=xsd3" />
+    <MetadataFile FileName="ServiceMonitoreo.disco" MetadataType="Disco" ID="d0230b5c-0282-4ed1-b8bf-b5e32386e772" SourceId="1" SourceUrl="http://192.168.161.41:3210/soap/ServiceMonitoreo?disco" />
+    <MetadataFile FileName="HandlerMonitoreo.wsdl" MetadataType="Wsdl" ID="552a2372-8921-43ee-be38-17f0bdd6bc32" SourceId="1" SourceUrl="http://192.168.161.41:3210/soap/ServiceMonitoreo?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.234.211:8000/FingerprintCompServiceBasic?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Prodem.Microfinanzas.CommonEntities.Common" />
+  <xs:element name="FingerprintComparerValidation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Prodem.Microfinanzas.CommonEntities.Common" minOccurs="0" name="fingerOrigin" nillable="true" type="q1:FingerprintDTO" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Prodem.Microfinanzas.CommonEntities.Common" minOccurs="0" name="colFingerprintsToCompare" nillable="true" type="q2:ArrayOfFingerprintDTO" />
+        <xs:element minOccurs="0" name="migrateFingerprints" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FingerprintComparerValidationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Prodem.Microfinanzas.CommonEntities.Common" minOccurs="0" name="FingerprintComparerValidationResult" nillable="true" type="q3:FingerValidationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FingerprintComparerValidationOneToOne">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Prodem.Microfinanzas.CommonEntities.Common" minOccurs="0" name="colFingerOrigin" nillable="true" type="q4:ArrayOfFingerprintDTO" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Prodem.Microfinanzas.CommonEntities.Common" minOccurs="0" name="colFingerprintsToCompare" nillable="true" type="q5:ArrayOfFingerprintDTO" />
+        <xs:element minOccurs="0" name="migrateFingerprints" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FingerprintComparerValidationOneToOneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Prodem.Microfinanzas.CommonEntities.Common" minOccurs="0" name="FingerprintComparerValidationOneToOneResult" nillable="true" type="q6:ArrayOfFingerValidationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

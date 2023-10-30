@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPM_GUI", "NPM_GUI\NPM_GUI.csproj", "{63587CFD-0757-4020-A414-1CC1C519777B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63587CFD-0757-4020-A414-1CC1C519777B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63587CFD-0757-4020-A414-1CC1C519777B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63587CFD-0757-4020-A414-1CC1C519777B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63587CFD-0757-4020-A414-1CC1C519777B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1EF142D0-AEE2-4568-AAED-EA7D66557DE2}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.1.112:8080/tfs/newcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = NPM_GUI\\NPM_GUI.csproj
+		SccProjectName1 = NPM_GUI
+		SccLocalPath1 = NPM_GUI
+	EndGlobalSection
+EndGlobal

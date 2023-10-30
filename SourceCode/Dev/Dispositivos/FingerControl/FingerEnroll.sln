@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FingerPrintControl", "FingerPrintControl\FingerPrintControl.csproj", "{1992923E-60E1-4AB0-8A54-052E11845547}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingFingeprint", "TestingFingeprint\TestingFingeprint.csproj", "{8024BDC9-215B-4342-A477-DE9CFA378443}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostFingerControl", "HostFingerControl\HostFingerControl.csproj", "{B9B0722B-EC9A-454C-BF34-CBD1DF5C81B8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{8F8D0C6D-FE10-42CA-BE59-D9B24CE168F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{61A229CF-EF2F-42C3-8AC0-05D52E2B097D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{B90F1BF5-B425-417C-B7D2-48D1F77EA32A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Finger.Component", "Finger.Component\Finger.Component.csproj", "{B9A75BA3-FF2D-45B6-A450-18D31C133007}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FingerCaptureService", "FingerCaptureService\FingerCaptureService.csproj", "{5BB65BF5-7028-4856-B9B3-8D686F129015}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1992923E-60E1-4AB0-8A54-052E11845547}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1992923E-60E1-4AB0-8A54-052E11845547}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1992923E-60E1-4AB0-8A54-052E11845547}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1992923E-60E1-4AB0-8A54-052E11845547}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8024BDC9-215B-4342-A477-DE9CFA378443}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8024BDC9-215B-4342-A477-DE9CFA378443}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8024BDC9-215B-4342-A477-DE9CFA378443}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8024BDC9-215B-4342-A477-DE9CFA378443}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9B0722B-EC9A-454C-BF34-CBD1DF5C81B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9B0722B-EC9A-454C-BF34-CBD1DF5C81B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9B0722B-EC9A-454C-BF34-CBD1DF5C81B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9B0722B-EC9A-454C-BF34-CBD1DF5C81B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9A75BA3-FF2D-45B6-A450-18D31C133007}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9A75BA3-FF2D-45B6-A450-18D31C133007}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9A75BA3-FF2D-45B6-A450-18D31C133007}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9A75BA3-FF2D-45B6-A450-18D31C133007}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BB65BF5-7028-4856-B9B3-8D686F129015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BB65BF5-7028-4856-B9B3-8D686F129015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BB65BF5-7028-4856-B9B3-8D686F129015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BB65BF5-7028-4856-B9B3-8D686F129015}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1992923E-60E1-4AB0-8A54-052E11845547} = {8F8D0C6D-FE10-42CA-BE59-D9B24CE168F1}
+		{8024BDC9-215B-4342-A477-DE9CFA378443} = {B90F1BF5-B425-417C-B7D2-48D1F77EA32A}
+		{B9B0722B-EC9A-454C-BF34-CBD1DF5C81B8} = {61A229CF-EF2F-42C3-8AC0-05D52E2B097D}
+		{B9A75BA3-FF2D-45B6-A450-18D31C133007} = {8F8D0C6D-FE10-42CA-BE59-D9B24CE168F1}
+		{5BB65BF5-7028-4856-B9B3-8D686F129015} = {61A229CF-EF2F-42C3-8AC0-05D52E2B097D}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.1.112:8080/tfs/newcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = FingerPrintControl\\FingerPrintControl.csproj
+		SccProjectTopLevelParentUniqueName1 = FingerEnroll.sln
+		SccProjectName1 = FingerPrintControl
+		SccLocalPath1 = FingerPrintControl
+		SccProjectUniqueName2 = TestingFingeprint\\TestingFingeprint.csproj
+		SccProjectTopLevelParentUniqueName2 = FingerEnroll.sln
+		SccProjectName2 = TestingFingeprint
+		SccLocalPath2 = TestingFingeprint
+		SccProjectUniqueName3 = HostFingerControl\\HostFingerControl.csproj
+		SccProjectTopLevelParentUniqueName3 = FingerEnroll.sln
+		SccProjectName3 = HostFingerControl
+		SccLocalPath3 = HostFingerControl
+		SccProjectUniqueName4 = Finger.Component\\Finger.Component.csproj
+		SccProjectTopLevelParentUniqueName4 = FingerEnroll.sln
+		SccProjectName4 = Finger.Component
+		SccLocalPath4 = Finger.Component
+		SccProjectUniqueName5 = FingerCaptureService\\FingerCaptureService.csproj
+		SccProjectTopLevelParentUniqueName5 = FingerEnroll.sln
+		SccProjectName5 = FingerCaptureService
+		SccLocalPath5 = FingerCaptureService
+	EndGlobalSection
+EndGlobal

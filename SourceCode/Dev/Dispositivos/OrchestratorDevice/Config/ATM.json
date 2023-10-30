@@ -1,0 +1,64 @@
+{
+  "configCardReader": {
+    "IdTypeCardReader": 1,
+    "NameCarderReader": "CREATOR",
+    "SerialNumber": "",
+    "HasCarReader": true
+  },
+  "configDispenserCOM": {
+    "Portname": "COM3",
+    "ReadTimeout": 180000,
+    "WriteTimeout": 180000,
+    "Baudios": 9600,
+    "Paridad": 2,
+    "Data": 7,
+    "SerialNumber": "",
+    "HasDispenser": true
+  },
+  "configDispenserStatus": {
+    "NumBandejas": 4,
+    "MaxQuantityBill": 30,
+    "Cassettes": [
+      {
+        "Id": 1,
+        "Sequence": 1,
+        "CurrencyCourt": 10,
+        "TotalQuantity": 18,
+        "Status": "0",
+        "MinQuantity": 15
+      },
+      {
+        "Id": 2,
+        "Sequence": 2,
+        "CurrencyCourt": 50,
+        "TotalQuantity": 500,
+        "Status": "0",
+        "MinQuantity": 15
+      },
+      {
+        "Id": 3,
+        "Sequence": 3,
+        "CurrencyCourt": 50,
+        "TotalQuantity": 20,
+        "Status": "0",
+        "MinQuantity": 15
+      },
+      {
+        "Id": 4,
+        "Sequence": 4,
+        "CurrencyCourt": 100,
+        "TotalQuantity": 50,
+        "Status": "0",
+        "MinQuantity": 15
+      }
+    ],
+    "HasDispenser": true,
+    "Tipo": "NMD100"
+  },
+  "configFingerPrintReader": {
+    "IdTypeFingerPrint": 1,
+    "NameFingerPrint": "DIGITAL PERSONA",
+    "SerialNumber": "",
+    "HasFingerPrint": true
+  }
+}

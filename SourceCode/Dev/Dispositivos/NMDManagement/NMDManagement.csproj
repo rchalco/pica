@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{703BEA00-90D2-4936-8D50-F2373A1B87B6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NMDManagement</RootNamespace>
+    <AssemblyName>NMDManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>LogoTres.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AeroWizard, Version=2.3.1.0, Culture=neutral, PublicKeyToken=915e74f5d64b8f37, processorArchitecture=MSIL">
+      <HintPath>..\packages\AeroWizard.2.3.1\lib\net45\AeroWizard.dll</HintPath>
+    </Reference>
+    <Reference Include="CifrarVB, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\3Party\FOR_LOGGER_NMD\CifrarVB.dll</HintPath>
+    </Reference>
+    <Reference Include="DebugLoger">
+      <HintPath>..\..\..\..\3Party\FOR_LOGGER_NMD\DebugLoger.dll</HintPath>
+    </Reference>
+    <Reference Include="Foundation.Stone.Application">
+      <HintPath>..\..\..\..\..\FoundationStone\SeedFramework\Lib\Foundation.Stone.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="Foundation.Stone.Business">
+      <HintPath>..\..\..\..\..\FoundationStone\SeedFramework\Lib\Foundation.Stone.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="Foundation.Stone.CrossCuting">
+      <HintPath>..\..\..\..\..\FoundationStone\SeedFramework\Lib\Foundation.Stone.CrossCuting.dll</HintPath>
+    </Reference>
+    <Reference Include="Foundation.Stone.Data">
+      <HintPath>..\..\..\..\..\FoundationStone\SeedFramework\Lib\Foundation.Stone.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Hangar.ServiceImplement, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Plataforma de MicroServicios\ReleaseLib\Hangar.ServiceImplement\Hangar.ServiceImplement.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Crm.Sdk.Proxy, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CrmSdk.CoreAssemblies.9.0.2.45\lib\net462\Microsoft.Crm.Sdk.Proxy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CrmSdk.CoreAssemblies.9.0.2.45\lib\net462\Microsoft.Xrm.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.2-beta1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RegisterLogger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\3Party\FOR_LOGGER_NMD\RegisterLogger.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=6.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.6.0.2\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccedeBD.cs" />
+    <Compile Include="Adapter.cs" />
+    <Compile Include="Administration\clPrint.cs" />
+    <Compile Include="Administration\DispenserLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\DispenserLoad.Designer.cs">
+      <DependentUpon>DispenserLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\FrmCalibrateDispenser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\FrmCalibrateDispenser.Designer.cs">
+      <DependentUpon>FrmCalibrateDispenser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\FrmCheckNMDStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\FrmCheckNMDStatus.Designer.cs">
+      <DependentUpon>FrmCheckNMDStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\frmConfigWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\frmConfigWizard.Designer.cs">
+      <DependentUpon>frmConfigWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\FrmDispencerAccountingBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\FrmDispencerAccountingBalance.Designer.cs">
+      <DependentUpon>FrmDispencerAccountingBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\MDIAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\MDIAdmin.Designer.cs">
+      <DependentUpon>MDIAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cEncrypt.cs" />
+    <Compile Include="cIdBandejas.cs" />
+    <Compile Include="ClientRestHelper.cs" />
+    <Compile Include="cMenu.cs" />
+    <Compile Include="ConfigBD.cs" />
+    <Compile Include="ConfigDTO.cs" />
+    <Compile Include="cStatusTable.cs" />
+    <Compile Include="Environments.cs" />
+    <Compile Include="FileHelper.cs" />
+    <Compile Include="GetAppSetting.cs" />
+    <Compile Include="getIP.cs" />
+    <Compile Include="Maintenance\FrmCashDelivery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FrmCashDelivery.Designer.cs">
+      <DependentUpon>FrmCashDelivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FrmCassettes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FrmCassettes.designer.cs">
+      <DependentUpon>FrmCassettes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\frmCleanNSNF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\frmCleanNSNF.Designer.cs">
+      <DependentUpon>frmCleanNSNF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FrmEmulatorShutter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FrmEmulatorShutter.Designer.cs">
+      <DependentUpon>FrmEmulatorShutter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FrmImgFinger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FrmImgFinger.designer.cs">
+      <DependentUpon>FrmImgFinger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FrmNMDStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FrmNMDStatus.Designer.cs">
+      <DependentUpon>FrmNMDStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FrmPrincipal.designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogIn.Designer.cs">
+      <DependentUpon>FormLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FrmAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FrmAdmin.Designer.cs">
+      <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\FrmSelfTestData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\FrmSelfTestData.designer.cs">
+      <DependentUpon>FrmSelfTestData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadConfig.cs" />
+    <Compile Include="ResponseDispensarATM.cs" />
+    <Compile Include="services.cs" />
+    <EmbeddedResource Include="Administration\DispenserLoad.resx">
+      <DependentUpon>DispenserLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\FrmCalibrateDispenser.resx">
+      <DependentUpon>FrmCalibrateDispenser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\FrmCheckNMDStatus.resx">
+      <DependentUpon>FrmCheckNMDStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\frmConfigWizard.resx">
+      <DependentUpon>frmConfigWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\FrmDispencerAccountingBalance.resx">
+      <DependentUpon>FrmDispencerAccountingBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\MDIAdmin.resx">
+      <DependentUpon>MDIAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FrmCashDelivery.resx">
+      <DependentUpon>FrmCashDelivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FrmCassettes.resx">
+      <DependentUpon>FrmCassettes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\frmCleanNSNF.resx">
+      <DependentUpon>frmCleanNSNF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FrmEmulatorShutter.resx">
+      <DependentUpon>FrmEmulatorShutter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FrmImgFinger.resx">
+      <DependentUpon>FrmImgFinger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FrmNMDStatus.resx">
+      <DependentUpon>FrmNMDStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogIn.resx">
+      <DependentUpon>FormLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FrmAdmin.resx">
+      <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\FrmSelfTestData.resx">
+      <DependentUpon>FrmSelfTestData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PRODEM LOGO-01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PRODEM LOGO-01Reducido.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogProdem.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogBancoPRODEMv1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogBancoPRODEMv2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Conxion.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Conxion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Conectar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Estadistica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Interop.Main\Interop.Main.csproj">
+      <Project>{5d60c763-4eb2-4c97-9fae-bddd1749c83b}</Project>
+      <Name>Interop.Main</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RuntimeDispensador\RuntimeDispensador.csproj">
+      <Project>{BE46CB95-C0A6-419B-9878-B37DE47773D0}</Project>
+      <Name>RuntimeDispensador</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\ConfigCOM.xml" />
+    <Content Include="Config\ConfigComand.xml" />
+    <Content Include="Config\ConfigDispenser.xml" />
+    <Content Include="Config\ConfigResponse.xml" />
+    <Content Include="LexiconErrors.xml" />
+    <Content Include="LogoTres.ico" />
+    <Content Include="Resources\Bs100b.bmp" />
+    <None Include="Resources\huella.png" />
+    <None Include="Resources\ImgHuella.png" />
+    <None Include="Resources\ImgFondoHuella.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Text.Json.6.0.2\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.2\build\System.Text.Json.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Text.Json.6.0.2\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Text.Json.6.0.2\build\System.Text.Json.targets'))" />
+  </Target>
+</Project>
