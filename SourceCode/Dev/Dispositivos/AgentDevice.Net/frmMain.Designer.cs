@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnHuella = new System.Windows.Forms.Button();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,6 +57,14 @@
             this.btnHuella.UseVisualStyleBackColor = true;
             this.btnHuella.Click += new System.EventHandler(this.btnHuella_Click);
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.BalloonTipText = "Agente operando...";
+            this.notifyIcon1.BalloonTipTitle = "Device";
+            this.notifyIcon1.Text = "Agente operando...";
+            this.notifyIcon1.Visible = true;
+            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -66,7 +76,9 @@
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.Text = "Agente Dispositvos";
+            this.MinimumSizeChanged += new System.EventHandler(this.frmMain_MinimumSizeChanged);
             this.Load += new System.EventHandler(this.frmMain_Load);
+            this.Resize += new System.EventHandler(this.frmMain_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -76,5 +88,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnHuella;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }

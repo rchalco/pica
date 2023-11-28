@@ -68,5 +68,25 @@ namespace AgentDevice.Net
             bindingREST.UseDefaultWebProxy = false;
             serviceHost.Open();
         }
+
+        private void frmMain_MinimumSizeChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Show();
+        }
+
+        private void frmMain_Resize(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Minimized)
+            {
+                Hide();
+                this.notifyIcon1.Visible = true;
+                this.notifyIcon1.ShowBalloonTip(2000);
+            }
+        }
     }
 }
