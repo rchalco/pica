@@ -1,0 +1,110 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0-windows7.0": {
+      "Interop.Main/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Interop.Main.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Interop.Main.dll": {}
+        }
+      },
+      "RuntimeFingerPrint/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "Interop.Main": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RuntimeFingerPrint.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RuntimeFingerPrint.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Interop.Main/1.0.0": {
+      "type": "project",
+      "path": "../Interop.Main/Interop.Main.csproj",
+      "msbuildProject": "../Interop.Main/Interop.Main.csproj"
+    },
+    "RuntimeFingerPrint/1.0.0": {
+      "type": "project",
+      "path": "../RuntimeFingerPrint/RuntimeFingerPrint.csproj",
+      "msbuildProject": "../RuntimeFingerPrint/RuntimeFingerPrint.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0-windows7.0": [
+      "RuntimeFingerPrint >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\viajero\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\GithubPersonal\\pica\\SourceCode\\Dev\\Dispositivos\\Agent.Device\\Agent.Device.csproj",
+      "projectName": "Agent.Device",
+      "projectPath": "D:\\GithubPersonal\\pica\\SourceCode\\Dev\\Dispositivos\\Agent.Device\\Agent.Device.csproj",
+      "packagesPath": "C:\\Users\\viajero\\.nuget\\packages\\",
+      "outputPath": "D:\\GithubPersonal\\pica\\SourceCode\\Dev\\Dispositivos\\Agent.Device\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\viajero\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0-windows7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows7.0",
+          "projectReferences": {
+            "D:\\GithubPersonal\\pica\\SourceCode\\Dev\\Dispositivos\\RuntimeFingerPrint\\RuntimeFingerPrint.csproj": {
+              "projectPath": "D:\\GithubPersonal\\pica\\SourceCode\\Dev\\Dispositivos\\RuntimeFingerPrint\\RuntimeFingerPrint.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net8.0-windows7.0": {
+        "targetAlias": "net8.0-windows7.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

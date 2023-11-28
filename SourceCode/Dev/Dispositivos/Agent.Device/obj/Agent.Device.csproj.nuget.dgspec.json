@@ -1,0 +1,104 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\GithubPersonal\\pica\\SourceCode\\Dev\\Dispositivos\\Agent.Device\\Agent.Device.csproj": {}
+  },
+  "projects": {
+    "D:\\GithubPersonal\\pica\\SourceCode\\Dev\\Dispositivos\\Agent.Device\\Agent.Device.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\GithubPersonal\\pica\\SourceCode\\Dev\\Dispositivos\\Agent.Device\\Agent.Device.csproj",
+        "projectName": "Agent.Device",
+        "projectPath": "D:\\GithubPersonal\\pica\\SourceCode\\Dev\\Dispositivos\\Agent.Device\\Agent.Device.csproj",
+        "packagesPath": "C:\\Users\\viajero\\.nuget\\packages\\",
+        "outputPath": "D:\\GithubPersonal\\pica\\SourceCode\\Dev\\Dispositivos\\Agent.Device\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\viajero\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows7.0",
+            "projectReferences": {
+              "D:\\GithubPersonal\\pica\\SourceCode\\Dev\\Dispositivos\\RuntimeFingerPrint\\RuntimeFingerPrint.csproj": {
+                "projectPath": "D:\\GithubPersonal\\pica\\SourceCode\\Dev\\Dispositivos\\RuntimeFingerPrint\\RuntimeFingerPrint.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\GithubPersonal\\pica\\SourceCode\\Dev\\Dispositivos\\Interop.Main\\Interop.Main.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\GithubPersonal\\pica\\SourceCode\\Dev\\Dispositivos\\Interop.Main\\Interop.Main.csproj",
+        "projectName": "Interop.Main",
+        "projectPath": "D:\\GithubPersonal\\pica\\SourceCode\\Dev\\Dispositivos\\Interop.Main\\Interop.Main.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "D:\\GithubPersonal\\pica\\SourceCode\\Dev\\Dispositivos\\RuntimeFingerPrint\\RuntimeFingerPrint.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\GithubPersonal\\pica\\SourceCode\\Dev\\Dispositivos\\RuntimeFingerPrint\\RuntimeFingerPrint.csproj",
+        "projectName": "RuntimeFingerPrint",
+        "projectPath": "D:\\GithubPersonal\\pica\\SourceCode\\Dev\\Dispositivos\\RuntimeFingerPrint\\RuntimeFingerPrint.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "D:\\GithubPersonal\\pica\\SourceCode\\Dev\\Dispositivos\\Interop.Main\\Interop.Main.csproj": {
+                "projectPath": "D:\\GithubPersonal\\pica\\SourceCode\\Dev\\Dispositivos\\Interop.Main\\Interop.Main.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    }
+  }
+}

@@ -46,19 +46,19 @@
       <HintPath>..\..\..\..\3Party\DP_SDK\DPUruNet.dll</HintPath>
     </Reference>
     <Reference Include="Foundation.Stone.Application">
-      <HintPath>..\..\..\..\..\FoundationStone\SeedFramework\Lib\Foundation.Stone.Application.dll</HintPath>
+      <HintPath>..\..\..\..\3Party\Foundation.Stone\Foundation.Stone.Application.dll</HintPath>
     </Reference>
     <Reference Include="Foundation.Stone.Business">
-      <HintPath>..\..\..\..\..\FoundationStone\SeedFramework\Lib\Foundation.Stone.Business.dll</HintPath>
+      <HintPath>..\..\..\..\3Party\Foundation.Stone\Foundation.Stone.Business.dll</HintPath>
     </Reference>
     <Reference Include="Foundation.Stone.CrossCuting">
-      <HintPath>..\..\..\..\..\FoundationStone\SeedFramework\Lib\Foundation.Stone.CrossCuting.dll</HintPath>
+      <HintPath>..\..\..\..\3Party\Foundation.Stone\Foundation.Stone.CrossCuting.dll</HintPath>
     </Reference>
     <Reference Include="Foundation.Stone.Data">
-      <HintPath>..\..\..\..\..\FoundationStone\SeedFramework\Lib\Foundation.Stone.Data.dll</HintPath>
+      <HintPath>..\..\..\..\3Party\Foundation.Stone\Foundation.Stone.Data.dll</HintPath>
     </Reference>
     <Reference Include="Hangar.ServiceImplement">
-      <HintPath>..\..\..\..\..\Plataforma de MicroServicios\ReleaseLib\Hangar.ServiceImplement\Hangar.ServiceImplement.dll</HintPath>
+      <HintPath>..\..\..\..\3Party\Hangar\Hangar.ServiceImplement.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Win32.TaskScheduler, Version=2.9.2.0, Culture=neutral, PublicKeyToken=e25603a88b3aa7da, processorArchitecture=MSIL">

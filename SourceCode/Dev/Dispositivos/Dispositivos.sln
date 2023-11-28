@@ -77,6 +77,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime.Receptor.Test", "Ru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneradorLotes", "GeneradorLotes\GeneradorLotes.csproj", "{EFEAE035-4F0C-4801-8D9D-72F59E31C4A5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. StandAlone.Agent", "2. StandAlone.Agent", "{4D409E8B-DCAB-4799-BB65-AAC9FE8A0BA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgentDevice.Net", "AgentDevice.Net\AgentDevice.Net.csproj", "{6964765E-A2A5-45B6-A034-4EB3D10486E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -163,6 +167,10 @@ Global
 		{EFEAE035-4F0C-4801-8D9D-72F59E31C4A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFEAE035-4F0C-4801-8D9D-72F59E31C4A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFEAE035-4F0C-4801-8D9D-72F59E31C4A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6964765E-A2A5-45B6-A034-4EB3D10486E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6964765E-A2A5-45B6-A034-4EB3D10486E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6964765E-A2A5-45B6-A034-4EB3D10486E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6964765E-A2A5-45B6-A034-4EB3D10486E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -200,94 +208,9 @@ Global
 		{E3B03616-F6E1-4A50-B789-8CC067221A28} = {C38188A6-A9C9-4DF9-840B-402CB5753394}
 		{2B75D61B-93D6-46F2-A916-5436E3CC24BF} = {E3B03616-F6E1-4A50-B789-8CC067221A28}
 		{EFEAE035-4F0C-4801-8D9D-72F59E31C4A5} = {00F7397E-FF8A-41AA-9434-9FCE4F514F3E}
+		{6964765E-A2A5-45B6-A034-4EB3D10486E1} = {4D409E8B-DCAB-4799-BB65-AAC9FE8A0BA3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C1985F5D-B03D-4F6D-A197-E7E5A483F113}
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 21
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://192.168.1.112:8080/tfs/newcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = DispensadorTest\\DispensadorTest.csproj
-		SccProjectTopLevelParentUniqueName1 = Dispositivos.sln
-		SccProjectName1 = DispensadorTest
-		SccLocalPath1 = DispensadorTest
-		SccProjectUniqueName2 = RuntimeDispensador\\RuntimeDispensador.csproj
-		SccProjectTopLevelParentUniqueName2 = Dispositivos.sln
-		SccProjectName2 = RuntimeDispensador
-		SccLocalPath2 = RuntimeDispensador
-		SccProjectUniqueName3 = ToolDirective\\ToolDirective.csproj
-		SccProjectTopLevelParentUniqueName3 = Dispositivos.sln
-		SccProjectName3 = ToolDirective
-		SccLocalPath3 = ToolDirective
-		SccProjectUniqueName4 = NMDManagement\\NMDManagement.csproj
-		SccProjectTopLevelParentUniqueName4 = Dispositivos.sln
-		SccProjectName4 = NMDManagement
-		SccLocalPath4 = NMDManagement
-		SccProjectUniqueName5 = RuntimeCardReader\\RuntimeCardReader.csproj
-		SccProjectTopLevelParentUniqueName5 = Dispositivos.sln
-		SccProjectName5 = RuntimeCardReader
-		SccLocalPath5 = RuntimeCardReader
-		SccProjectUniqueName6 = PCSC\\PCSC.csproj
-		SccProjectTopLevelParentUniqueName6 = Dispositivos.sln
-		SccProjectName6 = PCSC
-		SccLocalPath6 = PCSC
-		SccProjectUniqueName7 = RuntimeCardReader.Test\\RuntimeCardReader.Test.csproj
-		SccProjectTopLevelParentUniqueName7 = Dispositivos.sln
-		SccProjectName7 = RuntimeCardReader.Test
-		SccLocalPath7 = RuntimeCardReader.Test
-		SccProjectUniqueName8 = RuntimeFingerPrint\\RuntimeFingerPrint.csproj
-		SccProjectTopLevelParentUniqueName8 = Dispositivos.sln
-		SccProjectName8 = RuntimeFingerPrint
-		SccLocalPath8 = RuntimeFingerPrint
-		SccProjectUniqueName9 = RuntimeFinger.Services.Test\\RuntimeFinger.Services.Test.csproj
-		SccProjectTopLevelParentUniqueName9 = Dispositivos.sln
-		SccProjectName9 = RuntimeFinger.Services.Test
-		SccLocalPath9 = RuntimeFinger.Services.Test
-		SccProjectUniqueName10 = EmbosingProject\\EmbosingProject.csproj
-		SccProjectTopLevelParentUniqueName10 = Dispositivos.sln
-		SccProjectName10 = EmbosingProject
-		SccLocalPath10 = EmbosingProject
-		SccProjectUniqueName11 = Monitor\\Monitor.csproj
-		SccProjectTopLevelParentUniqueName11 = Dispositivos.sln
-		SccProjectName11 = Monitor
-		SccLocalPath11 = Monitor
-		SccProjectUniqueName12 = ServiceMonitoreo\\ServiceMonitoreo.csproj
-		SccProjectTopLevelParentUniqueName12 = Dispositivos.sln
-		SccProjectName12 = ServiceMonitoreo
-		SccLocalPath12 = ServiceMonitoreo
-		SccProjectUniqueName13 = Monitoreo.Test\\Monitoreo.Test.csproj
-		SccProjectTopLevelParentUniqueName13 = Dispositivos.sln
-		SccProjectName13 = Monitoreo.Test
-		SccLocalPath13 = Monitoreo.Test
-		SccProjectUniqueName14 = Orchestrator.Test\\Orchestrator.Test.csproj
-		SccProjectTopLevelParentUniqueName14 = Dispositivos.sln
-		SccProjectName14 = Orchestrator.Test
-		SccLocalPath14 = Orchestrator.Test
-		SccProjectUniqueName15 = Interop.Main\\Interop.Main.csproj
-		SccProjectTopLevelParentUniqueName15 = Dispositivos.sln
-		SccProjectName15 = Interop.Main
-		SccLocalPath15 = Interop.Main
-		SccProjectUniqueName16 = OrchestratorDevice\\Orchestrator.csproj
-		SccProjectTopLevelParentUniqueName16 = Dispositivos.sln
-		SccProjectName16 = OrchestratorDevice
-		SccLocalPath16 = OrchestratorDevice
-		SccProjectUniqueName17 = TestCardReader\\TestCardReader.csproj
-		SccProjectTopLevelParentUniqueName17 = Dispositivos.sln
-		SccProjectName17 = TestCardReader
-		SccLocalPath17 = TestCardReader
-		SccProjectUniqueName18 = RuntimeReceptor\\RuntimeReceptor.csproj
-		SccProjectTopLevelParentUniqueName18 = Dispositivos.sln
-		SccProjectName18 = RuntimeReceptor
-		SccLocalPath18 = RuntimeReceptor
-		SccProjectUniqueName19 = Runtime.Receptor.Test\\Runtime.Receptor.Test.csproj
-		SccProjectTopLevelParentUniqueName19 = Dispositivos.sln
-		SccProjectName19 = Runtime.Receptor.Test
-		SccLocalPath19 = Runtime.Receptor.Test
-		SccProjectUniqueName20 = GeneradorLotes\\GeneradorLotes.csproj
-		SccProjectTopLevelParentUniqueName20 = Dispositivos.sln
-		SccProjectName20 = GeneradorLotes
-		SccLocalPath20 = GeneradorLotes
 	EndGlobalSection
 EndGlobal
