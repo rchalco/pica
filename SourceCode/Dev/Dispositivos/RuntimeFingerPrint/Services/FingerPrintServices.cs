@@ -13,6 +13,8 @@ using Foundation.Stone.Business.Core;
 using RuntimeFingerPrint.Global;
 using Interop.Main.Cross.Domain.FingerPrint;
 using Interop.Main.Service.Interface;
+using Foundation.Stone.CrossCuting.StoneException.Enumerators;
+using Foundation.Stone.CrossCuting.StoneException;
 
 namespace RuntimeFingerPrint.Services
 {
@@ -85,7 +87,7 @@ namespace RuntimeFingerPrint.Services
 
         private void CloseReader()
         {
-            currentReader?.StopStreaming();            
+            currentReader?.StopStreaming();
             currentReader?.Dispose();
             currentReader = null;
         }
@@ -137,7 +139,10 @@ namespace RuntimeFingerPrint.Services
             }
             catch (Exception ex)
             {
-                ProcessError(ex, resul, Setings.LogConfigName, null);
+                //ProcessError(ex, resul, Setings.LogConfigName, null);
+                ExceptionManager.ProcessError(new StoneException(ex, CodeExceptionAplication.ErrorGenerico), "FingerDevice");
+                resul.State = ResponseType.Error;
+                resul.Message = ex.Message;
             }
 
             return resul;
@@ -212,13 +217,16 @@ namespace RuntimeFingerPrint.Services
                 {
                     lEnrrollResul.Add(Fmd.DeserializeXml(x));
                 });
-                
+
                 var resultEnrollment = DPUruNet.Enrollment.CreateEnrollmentFmd(EnrollFormatFmd, lEnrrollResul);
                 resul.Message = Convert.ToBase64String(Fmd.SerializeXml(resultEnrollment.Data).BinarySerialize());
             }
             catch (Exception ex)
             {
-                ProcessError(ex, resul, Setings.LogConfigName, null);
+                //ProcessError(ex, resul, Setings.LogConfigName, null);
+                ExceptionManager.ProcessError(new StoneException(ex, CodeExceptionAplication.ErrorGenerico), "FingerDevice");
+                resul.State = ResponseType.Error;
+                resul.Message = ex.Message;
             }
             return resul;
 

@@ -35,3 +35,8 @@ D:\GithubPersonal\pica\SourceCode\Dev\Dispositivos\AgentDevice.Net\bin\Debug\zh-
 D:\GithubPersonal\pica\SourceCode\Dev\Dispositivos\AgentDevice.Net\obj\Debug\AgentDevice.Net.csproj.CopyComplete
 D:\GithubPersonal\pica\SourceCode\Dev\Dispositivos\AgentDevice.Net\obj\Debug\AgentDevice.Net.exe
 D:\GithubPersonal\pica\SourceCode\Dev\Dispositivos\AgentDevice.Net\obj\Debug\AgentDevice.Net.pdb
+D:\GithubPersonal\pica\SourceCode\Dev\Dispositivos\AgentDevice.Net\bin\Debug\Config\LexiconErrors.xml
+D:\GithubPersonal\pica\SourceCode\Dev\Dispositivos\AgentDevice.Net\bin\Debug\EntityFramework.dll
+D:\GithubPersonal\pica\SourceCode\Dev\Dispositivos\AgentDevice.Net\bin\Debug\EntityFramework.SqlServer.dll
+D:\GithubPersonal\pica\SourceCode\Dev\Dispositivos\AgentDevice.Net\bin\Debug\EntityFramework.xml
+D:\GithubPersonal\pica\SourceCode\Dev\Dispositivos\AgentDevice.Net\bin\Debug\EntityFramework.SqlServer.xml

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Errors>
+  <ErrorGral>Error en la transacción, verifique la bitácora con el administrador</ErrorGral>
+  <Test_Error>Error en el test</Test_Error>
+</Errors>
