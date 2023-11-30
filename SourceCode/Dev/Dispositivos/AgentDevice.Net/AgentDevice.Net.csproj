@@ -57,6 +57,9 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inspectors\AuthenticationMessageInspector.cs" />
+    <Compile Include="Inspectors\CorsConstants.cs" />
+    <Compile Include="Inspectors\HangarBehavior.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmMain.resx">

@@ -1,4 +1,5 @@
-﻿using RuntimeFingerPrint.Services;
+﻿using Hangar.Core.Behaviours;
+using RuntimeFingerPrint.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -52,6 +53,7 @@ namespace AgentDevice.Net
                 DefaultOutgoingRequestFormat = System.ServiceModel.Web.WebMessageFormat.Json,
                 DefaultOutgoingResponseFormat = System.ServiceModel.Web.WebMessageFormat.Json
             });
+
             //configuramos el enpoint
             endpointREST.Binding.CloseTimeout = TimeSpan.Parse("00:10:00");
             endpointREST.Binding.OpenTimeout = TimeSpan.Parse("00:10:00");
@@ -66,12 +68,14 @@ namespace AgentDevice.Net
             bindingREST.ReceiveTimeout = TimeSpan.Parse("00:10:00");
             bindingREST.SendTimeout = TimeSpan.Parse("00:10:00");
             bindingREST.UseDefaultWebProxy = false;
+            endpointREST.EndpointBehaviors.Add(new HangarEndpointBehavior());
+
             serviceHost.Open();
         }
 
         private void frmMain_MinimumSizeChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
